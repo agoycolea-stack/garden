@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plant.name %>
+</p>
+
+<p>
+  <strong>Kingdom:</strong>
+  <%= @plant.kingdom %>
+</p>
+
+<p>
+  <strong>last_watering:</strong>
+  <%= @plant.last_watering %>
+</p>
+
+<p>
+  <strong>daily_volume:</strong>
+  <%= @plant.daily_volume %>
+</p>
+
+<p>
+  <strong>daily_minutes:</strong>
+  <%= @plant.daily_minutes %>
+</p>
+
+<p>
+  <strong>daily_quantity:</strong>
+  <%= @plant.daily_quantity %>
+</p>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>

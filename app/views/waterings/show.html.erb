@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @watering.volume %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @watering.minutes %>
+</p>
+
+<p>
+  <strong>Plant:</strong>
+  <%= @watering.plant %>
+</p>
+
+<%= link_to 'Edit', edit_watering_path(@watering) %> |
+<%= link_to 'Back', waterings_path %>

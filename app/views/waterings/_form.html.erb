@@ -1,0 +1,32 @@
+<%= form_with(model: watering, local: true) do |form| %>
+  <% if watering.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(watering.errors.count, "error") %> prohibited this watering from being saved:</h2>
+
+      <ul>
+      <% watering.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :volume %>
+    <%= form.number_field :volume %>
+  </div>
+
+  <div class="field">
+    <%= form.label :minutes %>
+    <%= form.number_field :minutes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plant_id %>
+    <%= form.collection_select :plant_id, @plants, :id, :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
